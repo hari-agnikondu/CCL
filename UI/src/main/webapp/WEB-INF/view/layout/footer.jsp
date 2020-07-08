@@ -1,0 +1,1 @@
+<div class="col-lg-12 text-right">Version:CL-VMS-HOST V18.1 </div>

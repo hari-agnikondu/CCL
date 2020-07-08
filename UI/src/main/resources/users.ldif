@@ -1,0 +1,270 @@
+dn: ou=groups,dc=incomm,dc=com
+objectclass: top
+objectclass: organizationalUnit
+ou: groups
+
+dn: ou=people,dc=incomm,dc=com
+objectclass: top
+objectclass: organizationalUnit
+ou: people
+
+dn: uid=DEV,ou=people,dc=incomm,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Ashish Butani
+uid: DEV
+userPassword: password
+
+dn: uid=hagnikondu,ou=people,dc=incomm,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Incomm User
+mail:nawazkhann@fss.co.in
+phone:8939017219
+uid: TEST
+userPassword:password
+
+dn: uid=NNAWAZ,ou=people,dc=incomm,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: NAWAZ KHAN
+mail:nawaz@fss.co.in
+phone:8939017219
+uid: NNAWAZ
+userPassword: password
+
+dn: uid=MITSY,ou=people,dc=incomm,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: MITSY
+mail:MITSY@fss.co.in
+phone:8939017219
+uid: MITSY
+userPassword: password
+
+dn: uid=JUSTIN,ou=people,dc=incomm,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: NAWAZ 548
+mail:MICHAEL@fss.co.in
+phone:8939017219
+uid: JUSTIN
+userPassword: password
+
+dn: uid=APPLE,ou=people,dc=incomm,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: APPLE 548
+mail:APPLE@fss.co.in
+phone:8939017219
+uid: APPLE
+userPassword: password
+
+dn: uid=REDMI,ou=people,dc=incomm,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: REDMI 548
+mail:REDMI@fss.co.in
+phone:8939017219
+uid: REDMI
+userPassword: password
+
+dn: uid=FLIPKART,ou=people,dc=incomm,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: FLIPKART 548
+mail:FLIPKART@fss.co.in
+phone:8939017219
+uid: FLIPKART
+userPassword: password
+
+
+dn: uid=AMAZON,ou=people,dc=incomm,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: AMAZON 548
+mail:AMAZON@fss.co.in
+phone:8939017219
+uid: AMAZON
+userPassword: password
+
+dn: uid=DEXTER,ou=people,dc=incomm,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: DEXTER 548
+mail:DEXTER@fss.co.in
+phone:8939017219
+uid: DEXTER
+userPassword: password
+
+dn: uid=FSSNET,ou=people,dc=incomm,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: FSSNET 548
+mail:FSSNET@fss.co.in
+phone:8939017219
+uid: FSSNET
+userPassword: password
+
+dn: uid=VINOTH,ou=people,dc=incomm,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: VINOTH 548
+mail:VINOTH@fss.co.in
+phone:8939017219
+uid: VINOTH
+userPassword: password
+
+dn: uid=JENNU,ou=people,dc=incomm,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: VINOTH 548
+mail:VINOTH@fss.co.in
+phone:8939017219
+uid: VINOTH
+userPassword: password
+
+dn: uid=JENNU,ou=people,dc=incomm,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: JENNU 548
+mail:JENNU@fss.co.in
+phone:8939017219
+uid: JENNU
+userPassword: password
+
+dn: uid=PIXER,ou=people,dc=incomm,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: PIXER 548
+mail:PIXER@fss.co.in
+phone:8939017219
+uid: PIXER
+userPassword: password
+
+dn: uid=SUPERNOVAS,ou=people,dc=incomm,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: SUPERNOVAS 548
+mail:SUPERNOVAS@fss.co.in
+phone:8939017219
+uid: SUPERNOVAS
+userPassword: password
+
+dn: uid=DOMINOS,ou=people,dc=incomm,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: DOMINOS 548
+mail:DOMINOS@fss.co.in
+phone:8939017219
+uid: DOMINOS
+userPassword: password
+
+dn: uid=WALLMART,ou=people,dc=incomm,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: WALLMART 548
+mail:WALLMART@fss.co.in
+phone:8939017219
+uid: WALLMART
+userPassword: password
+
+dn: uid=TESTFSS,ou=people,dc=incomm,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: TESTFSS 548
+mail:TESTFSS@fss.co.in
+phone:8939017219
+uid: TESTFSS
+userPassword: password
+
+dn: uid=GAYATHRI,ou=people,dc=incomm,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: GAYATHRI 548
+mail:GAYATHRI@fss.co.in
+phone:8939017219
+uid: GAYATHRI
+userPassword: password
+
+dn: uid=INS,ou=people,dc=incomm,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Regular User
+uid: INS
+userPassword: password
+
+dn: uid=GAYATHRI1,ou=people,dc=incomm,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: GAYATHRI1 548
+mail:GAYATHRI1@fss.co.in
+phone:8939017219
+uid: GAYATHRI1
+userPassword: password
+
+dn: uid=rgopal,ou=people,dc=incomm,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Incomm User
+mail:nawazkhann@fss.co.in
+phone:8939017219
+uid: TEST
+userPassword:password
+
+dn: uid=kloganathan,ou=people,dc=incomm,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Incomm User
+mail:nawazkhann@fss.co.in
+phone:8939017219
+uid: TEST
+userPassword:password

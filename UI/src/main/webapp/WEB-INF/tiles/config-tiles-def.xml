@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+	<!-- Templates Starts -->
+
+	<definition name="layout.basic" template="/WEB-INF/view/layout/clpvmsLayout.jsp">
+		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/view/layout/menu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
+	</definition>
+	
+	<definition name="layout.basic.customerProfile" template="/WEB-INF/view/layout/customerpopuplayout.jsp">
+		<put-attribute name="body" value="" />
+	</definition>
+
+
+<!--  for product layout by Nawaz-->
+
+<definition name="productLayout" template="/WEB-INF/view/layout/productLayout.jsp">
+		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/view/layout/menu.jsp" />
+		<!-- body starts-->
+      <!-- <put-attribute name="prodHeader" value="/WEB-INF/view/layout/prodHeader.jsp" /> -->
+      <put-attribute name="prodMenu" value="/WEB-INF/view/layout/prodMenu.jsp" />
+      <put-attribute name="body" value="" />
+      <!-- body ends -->
+      <put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
+	</definition>
+
+<definition name="viewProductLayout" template="/WEB-INF/view/layout/viewProductLayout.jsp">
+		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/view/layout/menu.jsp" />
+		<!-- body starts-->
+      <!-- <put-attribute name="prodHeader" value="/WEB-INF/view/layout/prodHeader.jsp" /> -->
+      <put-attribute name="viewProdMenu" value="/WEB-INF/view/layout/viewProdMenu.jsp" />
+      <put-attribute name="body" value="" />
+      <!-- body ends -->
+      <put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
+	</definition>
+<!-- for Customer Profile layout  -->
+
+<definition name="customerProfileLayout" template="/WEB-INF/view/layout/customerProfileLayout.jsp">
+		<put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/view/layout/menu.jsp" />
+		<!-- body starts-->
+      <put-attribute name="customerProfileMenu" value="/WEB-INF/view/layout/customerProfileMenu.jsp" />
+      <put-attribute name="body" value="" />
+      <!-- body ends -->
+      <put-attribute name="footer" value="/WEB-INF/view/layout/footer.jsp" />
+	</definition>
+
+
+<!--  for product layout by Nawaz -->
+
+	<definition name="logout" template="/WEB-INF/view/layout/clpvmsLayout.jsp">
+		<put-attribute name="header" value="" />
+		<put-attribute name="menu" value="" />
+		<put-attribute name="body" value="/WEB-INF/view/layout/logout.jsp" />
+		<put-attribute name="footer" value="" />
+	</definition>
+
+	<!-- Templates Ends -->
+
+	<!--Common Views Starts -->
+
+	<definition name="home" extends="layout.basic">
+		<put-attribute name="body" value="/WEB-INF/view/layout/home.jsp" />
+	</definition>
+	
+	<definition name="clpLogin" template="/WEB-INF/view/security/login.jsp">
+		<put-attribute name="header" value="" />
+		<put-attribute name="menu" value="" />
+		<put-attribute name="footer" value="" />
+		<put-attribute name="body" value="/WEB-INF/view/security/login.jsp" />
+	</definition>		
+
+	<!--Common Views Starts -->
+
+	<!-- Product Starts -->
+
+<!-- 	<definition name="productConfig" extends="productLayout">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/product/productConfig.jsp" />
+	</definition> -->
+
+
+	<definition name="product" extends="productLayout">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/product/product.jsp" />
+	</definition>
+
+	<!-- Product Ends -->
+
+<!-- Issuer Starts -->
+
+	<definition name="serviceError" extends="layout.basic">
+		<put-attribute name="body" value="/WEB-INF/view/layout/error.jsp" />
+	</definition>
+
+<definition name="home" extends="layout.basic">
+		<put-attribute name="body" value="/WEB-INF/view/layout/home.jsp" />
+	</definition>
+	
+	<definition name="issuerConfig" extends="layout.basic">
+		<put-attribute name="body" value="/WEB-INF/view/config/issuer/issuerConfig.jsp" />
+	</definition>
+	<definition name="addIssuer" extends="layout.basic">
+		<put-attribute name="body" value="/WEB-INF/view/config/issuer/addIssuer.jsp" />
+	</definition>
+	<definition name="editIssuer" extends="layout.basic">
+		<put-attribute name="body" value="/WEB-INF/view/config/issuer/editIssuer.jsp" />
+	</definition>
+	<definition name="viewIssuer" extends="layout.basic">
+		<put-attribute name="body" value="/WEB-INF/view/config/issuer/viewIssuer.jsp" />
+	</definition>
+
+	 	<definition name="logout" template="/WEB-INF/view/layout/logout.jsp" >
+	</definition>
+	
+	<!-- Partner starts -->
+	
+	<definition name="partnerConfig" extends="layout.basic">
+		<put-attribute name="body" value="/WEB-INF/view/config/partner/partnerConfig.jsp" />
+	</definition>
+	<definition name="showAddPartner" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/partner/addPartner.jsp" />
+	</definition>
+	<definition name="showEditPartner" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/partner/editPartner.jsp" />
+	</definition>
+	<definition name="showViewPartner" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/partner/viewPartner.jsp" />
+	</definition>
+	<definition name="serviceError" extends="layout.basic">
+		<put-attribute name="body" value="/WEB-INF/view/layout/error.jsp" />
+	</definition>
+	
+	<!-- Partner Ends -->
+	
+		<!-- Card Range Starts -->
+
+	<definition name="CardRangeConfig" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/cardrange/cardRangeConfig.jsp" />
+	</definition>
+	
+	<definition name="addCardRange" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/cardrange/addCardRange.jsp" />
+	</definition>
+	
+	<definition name="editCardRange" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/cardrange/editCardRange.jsp" />
+	</definition>
+	
+	<definition name="viewCardRange" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/cardrange/viewCardRange.jsp" />
+	</definition>
+
+	<!-- Card Range ends -->
+	
+	
+	
+		<!-- programId starts -->
+	<definition name="programIdConfig" extends="layout.basic">
+		<put-attribute name="body" value="/WEB-INF/view/config/programId/programIdConfig.jsp" />
+	</definition>
+	<definition name="addProgramId" extends="layout.basic">
+		<put-attribute name="body" value="/WEB-INF/view/config/programId/addProgramId.jsp" />
+	</definition>
+	<definition name="editProgramId" extends="layout.basic">
+		<put-attribute name="body" value="/WEB-INF/view/config/programId/editProgramId.jsp" />
+	</definition>
+	<definition name="updateProgramId" extends="layout.basic">
+		<put-attribute name="body" value="/WEB-INF/view/config/programId/updateProgramId.jsp" />
+	</definition>
+<definition name="viewProgramId" extends="layout.basic">
+		<put-attribute name="body" value="/WEB-INF/view/config/programId/viewProgramId.jsp" />
+	</definition>
+	<!-- programId ends -->
+	
+	
+	
+	
+	
+	
+	<!-- <definition name="productLimit" extends="layout.basic">
+		<put-attribute name="body" value="/WEB-INF/view/config/product/productLimit.jsp" />
+	</definition> -->
+	
+		<!-- Product Starts -->
+
+	<definition name="productConfig" extends="layout.basic">
+      <put-attribute name="body" value="/WEB-INF/view/config/product/productConfig.jsp" />
+	</definition>
+
+
+	<definition name="product" extends="productLayout">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/product/product.jsp" />
+	</definition>
+
+	<definition name="addProduct" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/product/addProduct.jsp" />
+	</definition>
+	
+		<definition name="editProduct" extends="productLayout">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/product/editProduct.jsp" />
+	</definition>
+	
+	
+	<definition name="showProductAlerts" extends="productLayout">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/product/alerts.jsp" />
+	</definition>
+
+	<definition name="productGeneral" extends="productLayout">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/product/productGeneral.jsp" />
+	</definition>
+
+	<definition name="productCvv" extends="productLayout">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/product/productCvv.jsp" />
+	</definition>
+	<definition name="pin" extends="productLayout">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/product/productPin.jsp" />
+	</definition>
+
+	<definition name="productPurse" extends="productLayout">
+		<put-attribute name="body" value="/WEB-INF/view/config/product/productPurse.jsp" />
+	</definition>
+	
+	
+	<definition name="productTxnCardStatus" extends="productLayout">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/product/productTxnCardStatus.jsp" />
+	</definition>
+	
+	<definition name="productLimit" extends="productLayout">
+		<put-attribute name="body" value="/WEB-INF/view/config/product/productLimits.jsp" />
+	</definition>
+	
+	<definition name="productTxnFee" extends="productLayout">
+		<put-attribute name="body" value="/WEB-INF/view/config/product/productTxnFee.jsp" />
+	</definition>
+	<definition name="productMonthlyFeeCap" extends="productLayout">
+		<put-attribute name="body" value="/WEB-INF/view/config/product/productMonthlyFeeCap.jsp" />
+	</definition>
+	<definition name="productMaintenanceFee" extends="productLayout">
+		<put-attribute name="body" value="/WEB-INF/view/config/product/productMaintenanceFee.jsp" />
+	</definition>
+	
+	
+	<!-- View For product -->
+	<definition name="viewProduct" extends="viewProductLayout">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/product/viewProduct.jsp" />
+	</definition>
+	
+	<definition name="viewProductGeneral" extends="viewProductLayout">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/product/viewProductGeneral.jsp" />
+	</definition>
+	
+    <definition name="viewProductPin" extends="viewProductLayout">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/product/viewProductPin.jsp" />
+	</definition>
+	
+	 <definition name="viewProductCvv" extends="viewProductLayout">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/product/viewProductCvv.jsp" />
+	</definition>
+	
+	<definition name="viewProductPurse" extends="viewProductLayout">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/product/viewProductPurse.jsp" />
+	</definition>
+	
+	<definition name="viewProductLimits" extends="viewProductLayout">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/product/viewProductLimits.jsp" />
+	</definition>
+	
+	<definition name="viewProductTxnFee" extends="viewProductLayout">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/product/viewProductTxnFee.jsp" />
+	</definition>
+	
+	<definition name="viewAlerts" extends="viewProductLayout">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/product/viewAlerts.jsp" />
+	</definition>
+	
+	<definition name="viewProductTxnCardStatus" extends="viewProductLayout">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/product/viewProductTxnCardStatus.jsp" />
+	</definition>
+	
+	<definition name="viewProductMaintenanceFee" extends="viewProductLayout">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/product/viewProductMaintenanceFee.jsp" />
+	</definition>
+	
+	<definition name="viewProductMonthlyFeeCap" extends="viewProductLayout">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/product/viewProductMonthlyFeeCap.jsp" />
+	</definition>
+
+	<!-- Product Ends -->
+
+
+
+	<!-- Purse Starts -->
+
+	<definition name="purseConfig" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/purse/purseConfig.jsp" />
+	</definition>
+	
+	
+	<definition name="addPurse" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/purse/addPurse.jsp" />
+	</definition>
+	
+	<definition name="editPurse" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/purse/editPurse.jsp" />
+	</definition>
+	
+	<definition name="viewPurse" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/purse/viewPurse.jsp" />
+	</definition>
+
+
+	<!-- Purse ends -->
+	
+	<!-- Group Access ID starts here -->
+	
+	<definition name="groupAccessIdConfig" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/groupAccessId/groupAccessIdConfig.jsp" />
+	</definition>
+	<definition name="addGroupAccessId" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/groupAccessId/addGroupAccessId.jsp" />
+	</definition>
+	
+	<definition name="assignGroupAccessId" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/groupAccessId/assignGroupAccessId.jsp" />
+	</definition>
+	<definition name="editAssignGroupAccess" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/groupAccessId/editAssignGroupAccess.jsp" />
+	</definition>
+	
+		<definition name="viewAssignGroupAccess" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/groupAccessId/viewAssignGroupAccess.jsp" />
+	</definition>
+	
+	
+	
+	<!-- Group Access ID ends -->
+	<!-- Global parameters starts  -->
+	<definition name="globalParametersConfig" extends="layout.basic">
+      <put-attribute name="body" value="/WEB-INF/view/config/globalParameters/globalParametersConfig.jsp" />
+	</definition>
+	
+	<!--PRM starts -->
+	    <definition name="prmConfig" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/prm/prmConfig.jsp" />
+	</definition>
+	<!-- PRM ends -->
+
+	
+	
+	
+	<!-- Global parameters ends -->
+	<!-- Job Scheduler Starts-->
+	<definition name="jobSchedulerConfig" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/setup/jobScheduler/jobSchedulerConfig.jsp" />
+	</definition>
+	<definition name="jobSchedulerServiceJobs" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/setup/jobScheduler/jobSchedulerServiceJobs.jsp" />
+	</definition>
+	<definition name="switchOverSchedulerConfig" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/setup/jobScheduler/switchOverSchedulerConfig.jsp" />
+	</definition>
+	
+	<!-- Job Scheduler Ends-->
+	
+	<!-- Block List Starts-->
+	<definition name="blockList" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/fraud/blockList/blockList.jsp" />
+	</definition>
+	<definition name="blockListAdd" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/fraud/blockList/addBlockList.jsp" />
+	</definition>
+	<!-- Block List Ends-->
+	
+	<!--PRM starts -->
+	    <definition name="prmConfig" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/fraud/prm/prmConfig.jsp" />
+	</definition>
+	<!-- PRM ends -->
+	
+		<!--REdemption starts -->
+	    <definition name="redemptionDelayConfig" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/fraud/redemption/redemptionDelayConfig.jsp" />
+	</definition>
+	<definition name="addRedemptionDelayMerchant" extends="layout.basic">
+		<put-attribute name="body" value="/WEB-INF/view/fraud/redemption/addRedemptionDelayMerchant.jsp" />
+	</definition>
+	<!-- REdemption ends -->
+	
+	
+	<!--Role starts -->
+	    <definition name="roleConfig" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/admin/role/roleConfig.jsp" />
+	</definition>
+	<definition name="showAddRole" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/admin/role/addRole.jsp" />
+	</definition>
+	<definition name="showEditRole" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/admin/role/editRole.jsp" />
+	</definition>
+	
+	<definition name="showViewRole" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/admin/role/viewRole.jsp" />
+	</definition>
+	<!-- Role ends -->
+
+	<!-- User config starts-->
+	<definition name="userConfig" extends="layout.basic">
+      <put-attribute name="body" value="/WEB-INF/view/admin/user/userConfig.jsp" />
+	</definition>
+	
+	<definition name="addUser" extends="layout.basic">
+      <put-attribute name="body" value="/WEB-INF/view/admin/user/addUser.jsp" />
+	</definition>
+	
+		<definition name="editUser" extends="layout.basic">
+      <put-attribute name="body" value="/WEB-INF/view/admin/user/editUser.jsp" />
+	</definition>
+		<definition name="viewUser" extends="layout.basic">
+      <put-attribute name="body" value="/WEB-INF/view/admin/user/viewUser.jsp" />
+	</definition>
+	
+	<!--UUser Config ends -->
+		<!-- Order starts -->
+		<definition name="placeOrder" extends="layout.basic">
+			<put-attribute name="body" value="/WEB-INF/view/order/placeOrder.jsp" />
+		</definition>
+		<definition name="approveOrder" extends="layout.basic">
+			<put-attribute name="body" value="/WEB-INF/view/order/approveOrder.jsp" />
+		</definition>
+		<definition name="OrderAndCCFProcess" extends="layout.basic">
+			<put-attribute name="body" value="/WEB-INF/view/order/OrderAndCCFProcess.jsp" />
+		</definition>
+		<definition name="CNFileUpload" extends="layout.basic">
+			<put-attribute name="body" value="/WEB-INF/view/order/CNFileUpload.jsp" />
+		</definition>
+		<definition name="checkOrderStatus" extends="layout.basic">
+			<put-attribute name="body" value="/WEB-INF/view/order/checkOrderStatus.jsp" />
+		</definition>
+		<definition name="checkCNFileStatus" extends="layout.basic">
+			<put-attribute name="body" value="/WEB-INF/view/order/checkCNFileStatus.jsp" />
+		</definition>
+	<!-- Order ends -->
+	
+	<!--Group starts -->
+		<definition name="groupConfig" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/admin/group/groupConfig.jsp" />
+	</definition>
+	
+	
+	<definition name="addGroup" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/admin/group/addGroup.jsp" />
+	</definition>
+	
+	<definition name="editGroup" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/admin/group/editGroup.jsp" />
+	</definition>
+	
+	<definition name="viewGroup" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/admin/group/viewGroup.jsp" />
+	</definition>
+
+	<!--Group End -->
+
+<!-- Location configuration starts -->
+
+<definition name="locationConfig" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/location/locationConfig.jsp" />
+	</definition>
+	
+	<definition name="addLocation" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/location/addLocation.jsp" />
+	</definition>
+	<definition name="editLocation" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/location/editLocation.jsp" />
+	</definition>
+	
+	<definition name="viewLocation" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/location/viewLocation.jsp" />
+	</definition>
+
+<!-- Location configuration ends -->
+
+<!-- Merchant configuration starts -->
+
+
+
+	
+	
+	<definition name="merchantConfig" extends="layout.basic">
+		<put-attribute name="body" value="/WEB-INF/view/config/merchant/merchantConfig.jsp" />
+	</definition>
+	<definition name="addMerchant" extends="layout.basic">
+		<put-attribute name="body" value="/WEB-INF/view/config/merchant/addMerchant.jsp" />
+	</definition>
+	<definition name="editMerchant" extends="layout.basic">
+		<put-attribute name="body" value="/WEB-INF/view/config/merchant/editMerchant.jsp" />
+	</definition>
+	<definition name="viewMerchant" extends="layout.basic">
+		<put-attribute name="body" value="/WEB-INF/view/config/merchant/viewMerchant.jsp" />
+	</definition>
+		<definition name="showAssignProductToMerchant" extends="layout.basic">
+		<put-attribute name="body" value="/WEB-INF/view/config/merchant/assignProductToMerchant.jsp" />
+	</definition>
+	
+		<definition name="assignMerchantConfig" extends="layout.basic">
+		<put-attribute name="body" value="/WEB-INF/view/config/merchant/assignMerchantConfig.jsp" />
+	</definition>
+	
+	<definition name="viewAssignProductToMerchant" extends="layout.basic">
+		<put-attribute name="body" value="/WEB-INF/view/config/merchant/viewAssignProductToMerchant.jsp" />
+	</definition>
+
+	 	<definition name="logout" template="/WEB-INF/view/layout/logout.jsp" >
+	</definition>
+
+<!-- Merchant configuration ends -->
+
+	<!-- Fulfillment configuration -->
+	
+	<definition name="fulFillmentConfig" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/fulfillment/fulFillmentConfig.jsp" />
+	</definition>
+	<definition name="addFullfilment" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/fulfillment/addFulfillment.jsp" />
+	</definition>
+
+	<definition name="editFulfillment" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/fulfillment/editFulfillment.jsp" />
+	</definition>
+	
+	<definition name="viewFulfillment" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/fulfillment/viewFulfillment.jsp" />
+	</definition>
+	
+		<!-- CCF configuration -->
+		
+	<definition name="ccfConfig" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/ccf/ccfConfig.jsp" />
+	</definition>
+	
+		<definition name="ccfConfigResult" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/ccf/ccfConfigResult.jsp" />
+	</definition>
+	
+		<!-- Package configuration -->
+		
+	<definition name="packageIDConfig" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/package/packageIDConfig.jsp" />
+	</definition>
+	<definition name="addPackage" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/package/addPackage.jsp" />
+	</definition>
+		<definition name="editPackage" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/package/editPackage.jsp" />
+	</definition>
+	<definition name="viewPackage" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/package/viewPackage.jsp" />
+	</definition>
+	
+	
+	<!-- Rule configuration -->
+	
+	<definition name="ruleConfig" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/rule/ruleConfig.jsp" />
+	</definition>
+	
+	<definition name="viewRule" extends="layout.basic">
+	<put-attribute name="header" value="" />
+		<put-attribute name="menu" value="" />
+		<put-attribute name="body" 	value="/WEB-INF/view/config/rule/viewRule.jsp" />
+		<put-attribute name="footer" value="" />
+	</definition>
+	
+		<definition name="viewTransaction" extends="layout.basic.customerProfile">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/rule/viewTransaction.jsp" />
+	</definition>
+	<!-- RuleSet configuration -->
+		
+	<definition name="ruleSetConfig" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/ruleSet/ruleSetConfig.jsp" />
+	</definition>
+	
+
+ 	
+	<!-- Transaction Flex configuration starts -->
+    	<definition name="TransactionFlexConfig" extends="layout.basic">
+		<put-attribute name="body" value="/WEB-INF/view/config/TransactionFlex/TransactionFlexConfig.jsp" />
+	</definition>
+<!-- Transaction Flex configuration starts -->
+	<!-- Stock starts -->
+		<definition name="defineStock" extends="layout.basic">
+			<put-attribute name="body" value="/WEB-INF/view/stock/defineStock.jsp" />
+		</definition>
+		<definition name="editStock" extends="layout.basic">
+			<put-attribute name="body" value="/WEB-INF/view/stock/editStock.jsp" />
+		</definition>
+		
+		<definition name="viewStock" extends="layout.basic">
+			<put-attribute name="body" value="/WEB-INF/view/stock/viewStock.jsp" />
+		</definition>
+		
+		<definition name="stockConfig" extends="layout.basic">
+			<put-attribute name="body" value="/WEB-INF/view/stock/stockConfig.jsp" />
+		</definition>
+<!-- Stock ends -->
+
+<!-- PAN Expiry Date Exemption starts -->
+
+<definition name="panExpiryDateConfig" extends="layout.basic">
+		<put-attribute name="body" value="/WEB-INF/view/config/panExipryExemption/panExpiryDateConfig.jsp" />
+	</definition>
+	
+<!-- PAN Expiry Date Exemption ends -->
+
+
+<!-- Card Number Inventory Generation starts -->
+<definition name="cardnumberinventorygeneration" extends="layout.basic">
+			<put-attribute name="body" value="/WEB-INF/view/inventory/cardnumberinventory.jsp" />
+		</definition>
+
+<!-- Card Number Inventory Generation ends -->
+
+<!-- Customer Profile -->
+<definition name="customerProfileConfig" extends="layout.basic">
+	<put-attribute name="body"
+		value="/WEB-INF/view/config/customerProfile/customerProfileConfig.jsp" />
+</definition>
+	<definition name="addCustomerProfile" extends="layout.basic">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/customerProfile/addCustomerProfile.jsp" />
+	</definition>
+	<definition name="customerProfileLimit" extends="customerProfileLayout">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/customerProfile/customerProfileLimits.jsp" />
+	</definition>
+
+	<definition name="customerProfileTxnFee" extends="customerProfileLayout">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/customerProfile/customerProfileTxnFee.jsp" />
+	</definition>
+	<definition name="customerProfileMonthlyFeeCap" extends="customerProfileLayout">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/customerProfile/customerProfileMonthlyFeeCap.jsp" />
+	</definition>
+	<definition name="customerProfileMaintenanceFee" extends="customerProfileLayout">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/customerProfile/customerProfileMaintenanceFee.jsp" />
+	</definition>		
+	
+	<definition name="editCustomerProfile" extends="customerProfileLayout">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/customerProfile/editCustomerProfile.jsp" />
+	</definition>	
+	<definition name="viewCard" extends="layout.basic.customerProfile">
+		<put-attribute name="body"
+			value="/WEB-INF/view/config/customerProfile/viewCard.jsp" />
+	</definition>	
+<!-- Customer Profile ends -->
+</tiles-definitions>
+
+
