@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+	<Properties>
+		<Property name="log-path">/home/Incomm/CCLP/services/job/logs</Property>
+		<Property name="LOG_EXCEPTION_CONVERSION_WORD">%xwEx</Property>
+		<Property name="LOG_LEVEL_PATTERN">%5p</Property>
+		<Property name="LOG_DATEFORMAT_PATTERN">yyyy-MM-dd HH:mm:ss.SSS</Property>
+		<Property name="LOG_PATTERN">%clr{%d{${LOG_DATEFORMAT_PATTERN}}}{faint} %clr{${LOG_LEVEL_PATTERN}} %clr{%pid}{magenta} %clr{---}{faint} %clr{[%15.15t]}{faint} %clr{%-40.40c{1.}}{cyan}:%clr{[%4.4L]}{cyan}%clr{:}{faint}%notEmpty{[%X{RRN}]} %m%n${sys:LOG_EXCEPTION_CONVERSION_WORD}</Property>				
+	</Properties>
+
+	<Appenders>
+
+		<!-- Console Appender -->
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="${LOG_PATTERN}" />
+		</Console>
+
+		<RollingFile name="RollingFileAppender"
+			fileName="${log-path}/cclp-job.log"
+			filePattern="${log-path}/$${date:yyyy-MM}/cclp-job-%d{MM-dd-yyyy}-%i.log.zip">
+			<PatternLayout pattern="${LOG_PATTERN}" />
+			<Policies>
+				<OnStartupTriggeringPolicy />
+				<TimeBasedTriggeringPolicy />
+				<SizeBasedTriggeringPolicy size="50 MB" />
+			</Policies>
+			<DefaultRolloverStrategy max="20" />
+		</RollingFile>
+
+		<RollingFile name="ErrorRollingFileAppender"
+			fileName="${log-path}/cclp-job-error.log"
+			filePattern="${log-path}/$${date:yyyy-MM}/cclp-job-error-%d{MM-dd-yyyy}-%i.log.zip">
+			<!-- <PatternLayout> <Pattern>%d [%t] %p %c - %m%n</Pattern> </PatternLayout> -->
+			<PatternLayout pattern="${LOG_PATTERN}" />
+			<Policies>
+				<OnStartupTriggeringPolicy />
+				<TimeBasedTriggeringPolicy />
+				<SizeBasedTriggeringPolicy size="50 MB" />
+			</Policies>
+			<DefaultRolloverStrategy max="20" />
+		</RollingFile>
+	</Appenders>
+	<Loggers>
+		<Logger name="org" level="warn" >
+			<AppenderRef ref="ErrorRollingFileAppender" />
+		</Logger>
+		<Root level="info">
+			<AppenderRef ref="Console"  />
+			<AppenderRef ref="RollingFileAppender" />
+		</Root>
+	</Loggers>
+</Configuration>
